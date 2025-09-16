@@ -1,13 +1,12 @@
 import HeroBanner from "@/components/HeroBanner";
 import { getStoryblokData } from "@/lib/storyblok-server";
+import Link from "next/link";
 
 async function getHeroBannerData() {
   try {
-    // Get the story with exact slug match
     const data = await getStoryblokData("cdn/stories/banner/hero");
-    console.log("Hero banner data:", data.story?.content || "No content found");
-    
-    // Extract the hero banner data from the page array
+    console.log("Hero banner info:", data.story?.content || "No content found");
+
     const heroContent = data.story?.content?.page?.[0] || null;
     return heroContent;
   } catch (error) {
@@ -18,7 +17,6 @@ async function getHeroBannerData() {
 
 export default async function Home() {
   const heroData = await getHeroBannerData();
-  console.log("Hero banner data:", heroData);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -29,10 +27,10 @@ export default async function Home() {
               <h1 className="text-3xl font-bold text-indigo-600">Travel Agency</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#" className="text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
-              <a href="/tours" className="text-gray-700 hover:text-indigo-600 transition-colors">Tours</a>
-              <a href="#" className="text-gray-700 hover:text-indigo-600 transition-colors">About</a>
-              <a href="#" className="text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+              <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors">Home</Link>
+              <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors">Tours</Link>
+              <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors">About</Link>
+              <Link href="#" className="text-gray-700 hover:text-indigo-600 transition-colors">Contact</Link>
             </nav>
           </div>
         </div>
