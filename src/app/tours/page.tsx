@@ -1,16 +1,6 @@
 const ToursPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20">
-        <div className="container mx-auto px-4 text-center pt-20">
-          <h1 className="text-5xl font-bold mb-6">Discover Amazing Tours</h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            Explore the world's most beautiful destinations with our carefully curated tour experiences
-          </p>
-        </div>
-      </div>
-
       {/* Tours Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -31,7 +21,7 @@ const ToursPage = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Discover the magic of Paris with our comprehensive city tour. Visit iconic landmarks and hidden gems.
               </p>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Book Now
               </button>
             </div>
@@ -54,7 +44,7 @@ const ToursPage = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Step back in time and explore the eternal city's ancient monuments and rich history.
               </p>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Book Now
               </button>
             </div>
@@ -77,7 +67,7 @@ const ToursPage = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Immerse yourself in Japanese culture with temples, gardens, and traditional experiences.
               </p>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Book Now
               </button>
             </div>
@@ -100,7 +90,7 @@ const ToursPage = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Experience the energy of the Big Apple with our guided tour of Manhattan's highlights.
               </p>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Book Now
               </button>
             </div>
@@ -123,7 +113,7 @@ const ToursPage = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Explore London's royal history and modern attractions in this comprehensive city tour.
               </p>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Book Now
               </button>
             </div>
@@ -146,7 +136,7 @@ const ToursPage = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Discover Gaudí's masterpieces and Barcelona's vibrant culture on this artistic journey.
               </p>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                 Book Now
               </button>
             </div>
@@ -155,7 +145,7 @@ const ToursPage = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-purple-800 text-white py-16">
+      <div className="bg-blue-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for Your Next Adventure?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

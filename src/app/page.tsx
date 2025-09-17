@@ -1,4 +1,6 @@
 import HeroBanner from "@/components/HeroBanner";
+import Mission from "@/components/Mission";
+import Services from "@/components/Services";
 import { getStoryblokData } from "@/lib/storyblok-server";
 
 async function getHeroBannerData() {
@@ -20,6 +22,8 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <HeroBanner data={heroData} />
+      <Services></Services>
+      <Mission></Mission>
     </div>
   );
 }
