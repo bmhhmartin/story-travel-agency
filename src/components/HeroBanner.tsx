@@ -20,7 +20,7 @@ export default function HeroBanner({ data }: HeroBannerProps) {
 
   return (
     <section
-      className="relative py-20 px-4 sm:px-6 lg:px-8 h-screen flex items-center overlay"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 h-[700px] flex items-center overlay"
       style={{
         backgroundImage: backgroundImageUrl
           ? `url(${backgroundImageUrl})`
