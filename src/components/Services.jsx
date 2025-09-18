@@ -3,12 +3,17 @@ import { getStoryblokData } from "@/lib/storyblok-server";
 export default async function Services() {
   // ✅ Await Storyblok request
   const data = await getStoryblokData("cdn/stories/", {
-    starts_with: "services/",
+    starts_with: "services/service-all-cards/",
+    sort_by: "created_at:desc",
+  });
+
+  const topInfo = await getStoryblokData("cdn/stories/", {
+    starts_with: "services/services-info/",
     sort_by: "created_at:desc",
   });
 
   const services = data?.stories || [];
-  console.log("Services:", services);
+  const topDetails = topInfo?.stories || [];
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -16,11 +21,10 @@ export default async function Services() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our <span className="text-blue-600">Services</span>
+            {topDetails[0]?.content.page[0]?.title_info}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive travel solutions to make your journey unforgettable. 
-            From planning to execution, we've got you covered.
+            {topDetails[0]?.content.page[0]?.subtitle_info}
           </p>
         </div>
 
