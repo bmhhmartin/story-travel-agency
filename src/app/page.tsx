@@ -6,7 +6,6 @@ import { getStoryblokData } from "@/lib/storyblok-server";
 async function getHeroBannerData() {
   try {
     const data = await getStoryblokData("cdn/stories/banner/hero");
-    console.log("Hero banner info:", data.story?.content || "No content found");
 
     const heroContent = data.story?.content?.page?.[0] || null;
     return heroContent;
