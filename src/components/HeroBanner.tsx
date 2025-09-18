@@ -1,20 +1,6 @@
 import Link from "next/link";
 
-type HeroBannerProps = {
-  data: {
-    BackgroundImage?: {
-      filename?: string;
-      url?: string;
-    };
-    Title?: string;
-    Subtitle?: string;
-    ButtonURL?: string;
-    ButtonName?: string;
-  };
-};
-
-export default function HeroBanner({ data }: HeroBannerProps) {
-  // Handle background image - Storyblok returns asset as object with filename/url
+export default function HeroBanner({ data }) {
   const backgroundImageUrl =
     data?.BackgroundImage?.filename || data?.BackgroundImage?.url || "";
 
