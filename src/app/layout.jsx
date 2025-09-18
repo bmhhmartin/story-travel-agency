@@ -1,14 +1,10 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import StoryblokProvider from "@/components/StoryblokProvider";
-import { ReactNode } from "react";
 import "./globals.css";
 
-interface RootLayoutProps {
-	children: ReactNode;
-}
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }) {
 	return (
 		<StoryblokProvider>
 			<html lang="en">
