@@ -1,4 +1,4 @@
-// File: /Users/martin/personal-projects/storyblok/story-travel-agency/src/app/page.tsx
+// File: /Users/martin/personal-projects/storyblok/story-travel-agency/src/app/page.jsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
