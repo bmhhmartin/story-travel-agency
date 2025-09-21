@@ -36,6 +36,7 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1">
+
               <Link href="/" className={`relative px-4 py-2 rounded-lg transition-all duration-300 font-medium group uppercase tracking-wide ${
                 pathname === '/' 
                   ? 'text-blue-600 bg-blue-50' 

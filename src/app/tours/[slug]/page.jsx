@@ -35,7 +35,7 @@ export default async function TourPage({ params }) {
             </figure>
             <ul className="absolute right-2 top-2 flex items-center flex-wrap gap-2 mb-6">
                 {tour.tour_category?.map((cat, idx) => (
-                    <li className="bg-purple-700 text-white text-sm rounded-sm px-2 py-1" key={idx}>{cat}</li>
+                    <li className="bg-gradient-to-r from-blue-600 to-blue-700 text-white text-xs font-semibold rounded-full px-3 py-1.5 shadow-lg backdrop-blur-sm border border-white/20 hover:scale-105 transition-transform duration-200" key={idx}>{cat}</li>
                 ))}
             </ul>
       </div>
