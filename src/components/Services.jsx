@@ -1,7 +1,6 @@
 import { getStoryblokData } from "@/lib/storyblok-server";
 
 export default async function Services() {
-  // ✅ Await Storyblok request
   const data = await getStoryblokData("cdn/stories/", {
     starts_with: "services/service-all-cards/",
     sort_by: "created_at:desc",
@@ -33,8 +32,8 @@ export default async function Services() {
         {services.map((service) =>
             service.content.page?.map((item, idx) => (
                 <div
-                key={`${service.uuid}-${idx}`}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8 border border-gray-100"
+                    key={`${service.uuid}-${idx}`}
+                    className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8 border border-gray-100"
                 >
                 <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
                     {item.service_icon}
