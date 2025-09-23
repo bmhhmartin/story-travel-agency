@@ -37,68 +37,50 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1">
 
-              <Link href="/" className={`relative px-4 py-2 rounded-lg transition-all duration-300 font-medium group uppercase tracking-wide ${
-                pathname === '/' 
-                  ? 'text-blue-600 bg-blue-50' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-              }`}>
-                Home
-                <span className={`absolute bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ${
-                  pathname === '/' 
-                    ? 'w-full left-0' 
-                    : 'left-1/2 w-0 group-hover:w-full group-hover:left-0'
-                }`}></span>
-              </Link>
-              <Link href="/about" className={`relative px-4 py-2 rounded-lg transition-all duration-300 font-medium group uppercase tracking-wide ${
-                pathname === '/about' 
-                  ? 'text-blue-600 bg-blue-50' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-              }`}>
-                About
-                <span className={`absolute bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ${
-                  pathname === '/about' 
-                    ? 'w-full left-0' 
-                    : 'left-1/2 w-0 group-hover:w-full group-hover:left-0'
-                }`}></span>
-              </Link>
-              <Link href="/tours" className={`relative px-4 py-2 rounded-lg transition-all duration-300 font-medium group uppercase tracking-wide ${
-                pathname === '/tours' || pathname.startsWith('/tours/')
-                  ? 'text-blue-600 bg-blue-50' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-              }`}>
-                Tours
-                <span className={`absolute bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ${
-                  pathname === '/tours' || pathname.startsWith('/tours/')
-                    ? 'w-full left-0' 
-                    : 'left-1/2 w-0 group-hover:w-full group-hover:left-0'
-                }`}></span>
-              </Link>
-              <Link href="/blog" className={`relative px-4 py-2 rounded-lg transition-all duration-300 font-medium group uppercase tracking-wide ${
-                pathname === '/blog' || pathname.startsWith('/blog/')
-                  ? 'text-blue-600 bg-blue-50' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-              }`}>
-                Blog
-                <span className={`absolute bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ${
-                  pathname === '/blog' || pathname.startsWith('/blog/')
-                    ? 'w-full left-0' 
-                    : 'left-1/2 w-0 group-hover:w-full group-hover:left-0'
-                }`}></span>
-              </Link>
-              <Link href="/contact" className={`relative px-4 py-2 rounded-lg transition-all duration-300 font-medium group uppercase tracking-wide ${
-                pathname === '/contact' 
-                  ? 'text-blue-600 bg-blue-50' 
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-              }`}>
-                Contact
-                <span className={`absolute bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ${
-                  pathname === '/contact' 
-                    ? 'w-full left-0' 
-                    : 'left-1/2 w-0 group-hover:w-full group-hover:left-0'
-                }`}></span>
-              </Link>
-              
-              {/* CTA Button */}
+            <ul className="flex gap-6">
+                <li>
+                    <Link
+                    href="/"
+                    className="px-3 py-1 text-sm font-medium uppercase tracking-wide text-gray-700 hover:text-blue-600"
+                    >
+                    Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    href="/about"
+                    className="px-3 py-1 text-sm font-medium uppercase tracking-wide text-gray-700 hover:text-blue-600"
+                    >
+                    About
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    href="/tours"
+                    className="px-3 py-1 text-sm font-medium uppercase tracking-wide text-gray-700 hover:text-blue-600"
+                    >
+                    Tours
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    href="/blog"
+                    className="px-3 py-1 text-sm font-medium uppercase tracking-wide text-gray-700 hover:text-blue-600"
+                    >
+                    Blog
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    href="/contact"
+                    className="px-3 py-1 text-sm font-medium uppercase tracking-wide text-gray-700 hover:text-blue-600"
+                    >
+                    Contact
+                    </Link>
+                </li>
+            </ul>
+            
+            {/* CTA Button */}
               <Link href="/tours" className="ml-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                 Book Now
               </Link>

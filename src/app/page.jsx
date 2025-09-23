@@ -6,11 +6,10 @@ import { getStoryblokData } from "@/lib/storyblok-server";
 async function getHeroBannerData() {
   try {
     const data = await getStoryblokData("cdn/stories/banner/hero");
-
     const heroContent = data.story?.content?.page?.[0] || null;
     return heroContent;
   } catch (error) {
-    console.error("Error fetching hero banner data:", error);
+        console.error("Error fetching hero banner data:", error);
     return null;
   }
 }

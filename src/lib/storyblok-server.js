@@ -17,7 +17,7 @@ export async function getStoryblokData(path, options = {}) {
     });
     return response.data;
   } catch (error) {
-    console.error('Storyblok API Error:', error);
+        console.error('Storyblok API Error:', error);
     throw error;
   }
 }
